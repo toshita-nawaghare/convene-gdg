@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* GDG 4-Color Signature Gradient Strip (Blue -> Red -> Yellow -> Green) */
+  .gdg-gradient-bar {
+    background: linear-gradient(
+      90deg,
+      #4285f4 0%,
+      #4285f4 25%,
+      #ea4335 25%,
+      #ea4335 50%,
+      #fbbc05 50%,
+      #fbbc05 75%,
+      #34a853 75%,
+      #34a853 100%
+    );
+  }
+
+  .gdg-smooth-gradient {
+    background: linear-gradient(90deg, #4285f4 0%, #ea4335 35%, #fbbc05 68%, #34a853 100%);
+  }
+
+  /* Tactile Interactive Button */
+  .btn-tactile {
+    @apply transition-all duration-200 ease-out transform hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.97];
+  }
+
+  /* Interactive Event Card Lift */
+  .card-interactive {
+    @apply transition-all duration-300 ease-out transform hover:-translate-y-1.5;
+  }
+}
