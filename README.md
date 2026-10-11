@@ -2,6 +2,13 @@
 
 A complete, role-based **Event Management & Registration** platform built with **MongoDB, Express, React (TypeScript + Vite), and Node.js**.
 
+## Live Deployment Links
+
+- **Frontend (Vercel):** [https://convene-gdg.vercel.app](https://convene-gdg.vercel.app)
+- **Backend API (Render):** [https://convene-backend-gts6.onrender.com](https://convene-backend-gts6.onrender.com)
+- **Live Events API Endpoint:** [https://convene-backend-gts6.onrender.com/api/events](https://convene-backend-gts6.onrender.com/api/events)
+- **GitHub Repository:** [https://github.com/toshita-nawaghare/convene-gdg](https://github.com/toshita-nawaghare/convene-gdg)
+
 ---
 
 ## Table of Contents
