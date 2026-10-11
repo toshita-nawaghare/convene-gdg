@@ -1113,6 +1113,26 @@ router.get("/reminders/me", authMiddleware, async (req, res) => {
   }
 });
 
+// Root API status & health endpoints so visiting the base Render URL returns a clean status JSON
+router.get("/", (_req, res) => {
+  return res.status(200).json({
+    status: "online",
+    service: "Convene — Event Management & Registration API",
+    frontend: "https://convene-gdg.vercel.app",
+    endpoints: {
+      events: "/api/events",
+      authRegister: "/api/auth/register",
+      authLogin: "/api/auth/login",
+      myRegistrations: "/api/registrations/me",
+      analytics: "/api/analytics",
+    },
+  });
+});
+
+router.get("/health", (_req, res) => {
+  return res.status(200).json({ status: "ok", timestamp: new Date().toISOString() });
+});
+
 // Mount router at both /api and / so both /api/events and /events work seamlessly
 app.use("/api", router);
 app.use("/", router);
